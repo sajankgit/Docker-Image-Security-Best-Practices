@@ -1,4 +1,4 @@
-# Docker Image Security Best Practice
+# Docker Image Security Best Practices
 
 Today, in modern era the application development has become so much fast paced and release cycles are more frequent. With earlier approach of deployment strategies, these releases cannot be managed and ultimately end up in losing customers.
 
