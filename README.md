@@ -4,7 +4,7 @@ Today, in modern era the application development has become so much fast paced a
 
 With evolution of Containers and orchestration tools, deployment was able to race up to the pace of development. However with this pace, definitely some security flaws that don’t catch our eyes can ruin our day.
 
-Here I will describe 3 basic but important security practices that we can enforce to help minimise these security flaws.
+Here I will describe 4 basic but important security practices that we can enforce to help minimise these security flaws.
 
 ## Use Official Image
 
@@ -47,6 +47,7 @@ It is always better to add hadolint in your CI pipeline itself, so that we catch
 Before even that, we should also have some kind of understanding on writing a Dockerfile properly. For that [read here](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
 
 ## Conclusion
+
 Here I explained some practices that you can easily implement to ensure basic security before deployment. There are so many other important practices you should be following which I will be writing about in future write ups.
 
 Hope this article help to strengthen the basic security practices. Happy day !
