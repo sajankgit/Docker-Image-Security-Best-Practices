@@ -6,7 +6,7 @@ With evolution of Containers and orchestration tools, deployment was able to rac
 
 Here I will describe 4 basic but important security practices that we can enforce to help minimise these security flaws.
 
-## Use Official Image
+## 1. Use Official Image
 
 Most of us use Images from docker hub as base Images in our Docker file. Make sure that the image pulled are official and are from verified developers.
 For example, as you can see from the screenshot, official images will have green Official Image tag.
@@ -14,7 +14,7 @@ For example, as you can see from the screenshot, official images will have green
 
 Yes, just like we follow only officially verified celebrity accounts in your social media, make sure your base image is also officially verified 😊
 
-## Use Minimal Base Images
+## 2. Use Minimal Base Images
 
 Prefer using alpine images which has fewer OS libraries. Lots of vulnerabilities in your Docker Image can be mitigated if we use alpine images.
 Another advantage of using minimal base image is that your Docker Image size will be considerably very less.
@@ -30,7 +30,7 @@ Below screenshot shows how much difference it makes. Please do check the number 
 
 ![image](https://user-images.githubusercontent.com/37524392/157166139-554e07b1-a982-4eff-85f0-8539206b3f2f.png)
 
-## Find and fix Open Source Vulnerabilities
+## 3. Find and fix Open Source Vulnerabilities
 
 Regularly Scan your Docker Image for Open Source Vulnerabilities.
 
@@ -39,7 +39,7 @@ Anchore Engine is a great scanner tool that you can use to scan your Image Vulne
 Further you can install anchore-engine and do a regular scan of your deployed docker images.
 For more details on how to install and use anchore engine, you can go through [this](https://github.com/anchore/anchore-engine).
 
-## Use Linter to Dockerfile
+## 4. Use Linter to Dockerfile
 
 Enforce Dockerfile best practices automatically by using a static code analysis tool such as [hadolint](https://github.com/hadolint/hadolint) linter, that will detect and alert for issues found in a Dockerfile.
 
@@ -47,7 +47,7 @@ It is always better to add hadolint in your CI pipeline itself, so that we catch
 Before even that, we should also have some kind of understanding on writing a Dockerfile properly. For that [read here](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
 
 
-
+## Conclusion
 
 Here I explained some practices that you can easily implement to ensure basic security before deployment. There are so many other important practices you should be following which I will be writing about in future write ups.
 
