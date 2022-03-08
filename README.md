@@ -1,18 +1,28 @@
 # Docker Image Security Best Practice
 
 Today, in modern era the application development has become so much fast paced and release cycles are more frequent. With earlier approach of deployment strategies, these releases cannot be managed and ultimately end up in losing customers.
+
 With evolution of Containers and orchestration tools, deployment was able to race up to the pace of development. However with this pace, definitely some security flaws that don’t catch our eyes can ruin our day.
+
 Here I will describe 3 basic but important security practices that we can enforce to help minimise these security flaws.
-Use Official Image
+
+## 1. Use Official Image
+
 Most of us use Images from docker hub as base Images in our Docker file. Make sure that the image pulled are official and are from verified developers.
 For example, as you can see from the screenshot, official images will have green Official Image tag.
+![image](https://user-images.githubusercontent.com/37524392/157165896-7bf5aa0a-d606-4fe5-b45e-9ed809ddf59a.png)
 
 Yes, just like we follow only officially verified celebrity accounts in your social media, make sure your base image is also officially verified 😊
-2. Use Minimal Base Images
+
+## 2. Use Minimal Base Images
+
 Prefer using alpine images which has fewer OS libraries. Lots of vulnerabilities in your Docker Image can be mitigated if we use alpine images.
 Another advantage of using minimal base image is that your Docker Image size will be considerably very less.
+
 For example, pulling from Node.js base image
-FROM node:10-alpine
+
+`FROM node:10-alpine`
+
 Recommendation: Always pin the version in Base Image so that your image won’t break if there is any update.
 Below screenshot shows how much difference it makes. Please do check the number of layers and its sizes.
 node alpine image
