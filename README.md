@@ -23,7 +23,7 @@ For example, pulling from Node.js base image
 
 `FROM node:10-alpine`
 
-### Recommendation: Always pin the version in Base Image so that your image won’t break if there is any update.
+#### Recommendation: Always pin the version in Base Image so that your image won’t break if there is any update.
 
 Below screenshot shows how much difference it makes. Please do check the number of layers and its sizes.
 ![image](https://user-images.githubusercontent.com/37524392/157166124-1d1aaafe-fccb-4531-a149-c3862eb6ed24.png)
@@ -46,7 +46,8 @@ Enforce Dockerfile best practices automatically by using a static code analysis 
 It is always better to add hadolint in your CI pipeline itself, so that we catch the problems earlier.
 Before even that, we should also have some kind of understanding on writing a Dockerfile properly. For that [read here](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
 
-## Conclusion
+
+
 
 Here I explained some practices that you can easily implement to ensure basic security before deployment. There are so many other important practices you should be following which I will be writing about in future write ups.
 
